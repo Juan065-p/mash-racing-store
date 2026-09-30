@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda — Mash Racing Store</title>
+  <meta name="description" content="Catálogo completo de merchandising F1 y MotoGP. Ropa, gorras, llaveros y carros a escala. Envíos a toda Colombia.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.29.0/dist/tabler-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="tienda">
+
+  <!-- ANNOUNCE BAR -->
+  <div class="announce-bar"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <nav-logo-slot class="nav-logo-slot"></nav-logo-slot>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="tienda.html?cat=ropa">F1 Ropa</a></li>
+        <li><a href="tienda.html?cat=motogp">MotoGP</a></li>
+        <li><a href="tienda.html?cat=escala">Escala</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://www.instagram.com/mash.racing2" target="_blank" rel="noopener"
+           class="nav-icon-btn" aria-label="Instagram">
+          <i class="ti ti-brand-instagram"></i>
+        </a>
+        <a href="carrito.html" class="nav-icon-btn" aria-label="Carrito" id="nav-cart-btn">
+          <i class="ti ti-shopping-cart"></i>
+          <span class="cart-count" id="cart-count"></span>
+        </a>
+        <button class="nav-burger" aria-label="Menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="menu">
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="tienda.html?cat=ropa">F1 Ropa</a>
+    <a href="tienda.html?cat=motogp">MotoGP</a>
+    <a href="tienda.html?cat=escala">Carros Escala</a>
+    <a href="carrito.html">Carrito</a>
+  </div>
+
+  <!-- CATALOG HERO -->
+  <section class="catalog-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a> / <span>Tienda</span>
+      </div>
+      <div class="eyebrow">Catálogo completo</div>
+      <h1 class="section-title" style="margin:.4rem 0 .75rem">Toda la <span>colección</span></h1>
+      <p style="color:var(--w60);font-size:.9rem;max-width:460px">
+        Ropa F1, MotoGP, gorras, llaveros y carros a escala. Envíos a toda Colombia.
+      </p>
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="todos">
+          <i class="ti ti-layout-grid"></i>Todos
+        </button>
+        <button class="filter-btn" data-filter="ropa">
+          <i class="ti ti-shirt"></i>Ropa F1
+        </button>
+        <button class="filter-btn yellow" data-filter="motogp">
+          <i class="ti ti-motorbike"></i>MotoGP
+        </button>
+        <button class="filter-btn" data-filter="gorras">
+          <i class="ti ti-sun"></i>Gorras
+        </button>
+        <button class="filter-btn" data-filter="llaveros">
+          <i class="ti ti-key"></i>Llaveros
+        </button>
+        <button class="filter-btn" data-filter="escala">
+          <i class="ti ti-car"></i>Carros escala
+        </button>
+      </div>
+      <div class="catalog-count" id="catalog-count"></div>
+    </div>
+  </section>
+
+  <!-- CATALOG GRID -->
+  <section class="section" style="background:var(--black)">
+    <div class="container">
+      <div class="products-grid" id="catalog-grid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <span class="logo-mash">MASH</span><span class="logo-racing"> RACING</span>
+            <span class="logo-store">STORE</span>
+          </div>
+          <p class="footer-tagline">Merchandising oficial de Fórmula 1 y MotoGP en Colombia.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/mash.racing2" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <i class="ti ti-brand-instagram"></i>
+            </a>
+            <a href="https://wa.me/573156532989" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
+              <i class="ti ti-brand-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Categorías</h4>
+          <ul class="footer-links">
+            <li><a href="tienda.html?cat=ropa">Ropa F1</a></li>
+            <li><a href="tienda.html?cat=motogp">MotoGP</a></li>
+            <li><a href="tienda.html?cat=gorras">Gorras</a></li>
+            <li><a href="tienda.html?cat=llaveros">Llaveros</a></li>
+            <li><a href="tienda.html?cat=escala">Carros escala</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/573156532989" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/mash.racing2" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 Mash Racing Store · Colombia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <i class="ti ti-circle-check"></i>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

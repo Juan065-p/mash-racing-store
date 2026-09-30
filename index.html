@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mash Racing Store — Ropa F1 &amp; MotoGP Colombia</title>
+  <meta name="description" content="Tienda oficial de merchandising F1 y MotoGP en Colombia. Ropa, gorras, llaveros y carros escala de tus escuderías favoritas. Envíos a todo el país.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.29.0/dist/tabler-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+
+  <!-- ANNOUNCE BAR -->
+  <div class="announce-bar"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <nav-logo-slot class="nav-logo-slot"></nav-logo-slot>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="tienda.html?cat=ropa">F1 Ropa</a></li>
+        <li><a href="tienda.html?cat=motogp">MotoGP</a></li>
+        <li><a href="tienda.html?cat=escala">Escala</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://www.instagram.com/mash.racing2" target="_blank" rel="noopener"
+           class="nav-icon-btn" aria-label="Instagram">
+          <i class="ti ti-brand-instagram"></i>
+        </a>
+        <a href="carrito.html" class="nav-icon-btn" aria-label="Carrito" id="nav-cart-btn">
+          <i class="ti ti-shopping-cart"></i>
+          <span class="cart-count" id="cart-count"></span>
+        </a>
+        <button class="nav-burger" aria-label="Menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" role="menu">
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="tienda.html?cat=ropa">F1 Ropa</a>
+    <a href="tienda.html?cat=motogp">MotoGP</a>
+    <a href="tienda.html?cat=escala">Carros Escala</a>
+    <a href="carrito.html">Carrito</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-stripe"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal">
+          <div class="hero-eyebrow-line"></div>
+          <span>Colombia · F1 · MotoGP</span>
+        </div>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          La <em>pasión</em>
+          <span class="yl">en alta</span>
+          velocidad
+        </h1>
+
+        <p class="hero-sub reveal reveal-delay-2">
+          Merchandising oficial F1 y MotoGP. Ropa, gorras, llaveros y coleccionables de tus escuderías y pilotos favoritos.
+        </p>
+
+        <div class="hero-ctas reveal reveal-delay-3">
+          <a href="tienda.html" class="btn btn-primary">
+            <i class="ti ti-shopping-bag"></i>Ver tienda
+          </a>
+          <a href="tienda.html?cat=escala" class="btn btn-outline">
+            <i class="ti ti-car"></i>Carros escala
+          </a>
+        </div>
+
+        <div class="hero-stats reveal">
+          <div>
+            <div class="stat-val">+<em>5</em></div>
+            <div class="stat-label">Categorías</div>
+          </div>
+          <div>
+            <div class="stat-val">+<em>23</em></div>
+            <div class="stat-label">Productos</div>
+          </div>
+          <div>
+            <div class="stat-val"><em>6</em></div>
+            <div class="stat-label">Escuderías F1</div>
+          </div>
+          <div>
+            <div class="stat-val"><em>4</em></div>
+            <div class="stat-label">Equipos MotoGP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAMS -->
+  <section class="teams">
+    <div class="container">
+      <div class="teams-header">
+        <div>
+          <div class="eyebrow reveal">Nuestras escuderías</div>
+          <h2 class="section-title reveal reveal-delay-1">Elige tu <span>equipo</span></h2>
+        </div>
+        <a href="tienda.html" class="btn btn-outline btn-sm reveal">Ver todo</a>
+      </div>
+
+      <div style="margin-bottom:1.5rem">
+        <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--red);font-weight:700;margin-bottom:.85rem">
+          <i class="ti ti-flag-checkered"></i> Fórmula 1
+        </p>
+        <div class="teams-scroll" id="teams-f1"></div>
+      </div>
+
+      <div>
+        <p style="font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--yellow);font-weight:700;margin-bottom:.85rem">
+          <i class="ti ti-motorbike"></i> MotoGP
+        </p>
+        <div class="teams-scroll" id="teams-motogp"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL SPLIT – F1 -->
+  <section class="editorial">
+    <div class="editorial-inner">
+      <div class="editorial-text">
+        <div class="eyebrow reveal">Colección F1</div>
+        <h2 class="section-title reveal reveal-delay-1">Viste la <span>velocidad</span></h2>
+        <p class="reveal reveal-delay-2">
+          Camisetas, hoodies y ropa exclusiva inspirada en los grandes equipos de la Fórmula 1. Diseños únicos, calidad premium que resiste cada vuelta.
+        </p>
+        <div class="reveal reveal-delay-3">
+          <a href="tienda.html?cat=ropa" class="btn btn-primary">
+            <i class="ti ti-shirt"></i>Ver ropa F1
+          </a>
+        </div>
+      </div>
+      <div class="editorial-img">
+        <img src="https://images.unsplash.com/photo-1541348263662-e068662d82af?w=900&auto=format&fit=crop&q=80"
+             alt="Fórmula 1 carrera" loading="lazy">
+        <div class="editorial-img-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL SPLIT – MotoGP (reversed) -->
+  <section class="editorial" style="background:var(--dark)">
+    <div class="editorial-inner reverse">
+      <div class="editorial-text">
+        <div class="eyebrow reveal" style="color:var(--yellow)">Colección MotoGP</div>
+        <h2 class="section-title reveal reveal-delay-1">La adrenalina <span class="y">de las</span> <span>motos</span></h2>
+        <p class="reveal reveal-delay-2">
+          Polos, camisas y chaquetas de los mejores pilotos y equipos del mundial de MotoGP. Rossi, Márquez, Ducati y mucho más.
+        </p>
+        <div class="reveal reveal-delay-3">
+          <a href="tienda.html?cat=motogp" class="btn btn-yellow">
+            <i class="ti ti-motorbike"></i>Ver MotoGP
+          </a>
+        </div>
+      </div>
+      <div class="editorial-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80"
+             alt="MotoGP" loading="lazy">
+        <div class="editorial-img-overlay" style="background:linear-gradient(135deg,rgba(255,210,0,.12) 0%,transparent 60%)"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="products section">
+    <div class="container">
+      <div class="products-header">
+        <div>
+          <div class="eyebrow reveal">Más populares</div>
+          <h2 class="section-title reveal reveal-delay-1">Destacados <span>de la tienda</span></h2>
+        </div>
+        <a href="tienda.html" class="btn btn-outline btn-sm reveal">Ver todo el catálogo</a>
+      </div>
+      <div class="products-grid reveal" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <!-- COLLECTION BANNERS -->
+  <div class="collection-banners">
+    <a href="tienda.html?cat=escala" class="collection-banner">
+      <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80"
+           alt="Carros a escala F1" loading="lazy">
+      <div class="collection-banner-overlay"></div>
+      <div class="collection-banner-body">
+        <div class="collection-banner-eyebrow">Coleccionables · Réplicas oficiales</div>
+        <div class="collection-banner-title">Carros a<br>escala F1</div>
+        <div class="collection-banner-cta">Explorar colección <i class="ti ti-arrow-right"></i></div>
+      </div>
+    </a>
+    <a href="tienda.html?cat=gorras" class="collection-banner">
+      <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80"
+           alt="Gorras F1" loading="lazy">
+      <div class="collection-banner-overlay"></div>
+      <div class="collection-banner-body">
+        <div class="collection-banner-eyebrow">Gorras · Snapback · Dad hat</div>
+        <div class="collection-banner-title">Gorras<br>Racing</div>
+        <div class="collection-banner-cta">Ver gorras <i class="ti ti-arrow-right"></i></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about section">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-visual reveal">
+          <div class="about-visual-placeholder">🏎️</div>
+        </div>
+        <div class="about-body">
+          <div class="eyebrow reveal">Sobre Mash Racing</div>
+          <h2 class="section-title reveal reveal-delay-1">Pasión por <span>las carreras</span></h2>
+          <p class="reveal reveal-delay-2">
+            Somos un emprendimiento colombiano especializado en merchandising de Fórmula 1 y MotoGP. Nuestro objetivo es llevar la emoción del motorsport a tus manos con productos de alta calidad.
+          </p>
+          <p class="reveal reveal-delay-2">
+            Cada producto es seleccionado con cuidado para garantizar que los fans más exigentes queden satisfechos.
+          </p>
+          <div class="about-features reveal reveal-delay-3">
+            <div class="about-feature"><i class="ti ti-truck"></i>Envíos a toda Colombia</div>
+            <div class="about-feature"><i class="ti ti-shield-check"></i>Garantía de calidad en todos los productos</div>
+            <div class="about-feature"><i class="ti ti-brand-whatsapp"></i>Atención personalizada por WhatsApp</div>
+            <div class="about-feature"><i class="ti ti-certificate"></i>Colecciones F1 y MotoGP exclusivas</div>
+          </div>
+          <div class="about-ctas reveal">
+            <a href="tienda.html" class="btn btn-primary">
+              <i class="ti ti-shopping-bag"></i>Ir a la tienda
+            </a>
+            <a href="https://wa.me/573156532989" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="ti ti-brand-whatsapp"></i>WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTA STRIP -->
+  <div class="insta-strip">
+    <div class="insta-lbl">Síguenos en Instagram</div>
+    <div class="insta-handle">
+      <a href="https://www.instagram.com/mash.racing2" target="_blank" rel="noopener">@mash.racing2</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <span class="logo-mash">MASH</span><span class="logo-racing"> RACING</span>
+            <span class="logo-store">STORE</span>
+          </div>
+          <p class="footer-tagline">Merchandising oficial de Fórmula 1 y MotoGP en Colombia. Productos premium para los fans más apasionados del motorsport.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/mash.racing2" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <i class="ti ti-brand-instagram"></i>
+            </a>
+            <a href="https://wa.me/573156532989" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
+              <i class="ti ti-brand-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Categorías</h4>
+          <ul class="footer-links">
+            <li><a href="tienda.html?cat=ropa">Ropa F1</a></li>
+            <li><a href="tienda.html?cat=motogp">MotoGP</a></li>
+            <li><a href="tienda.html?cat=gorras">Gorras</a></li>
+            <li><a href="tienda.html?cat=llaveros">Llaveros</a></li>
+            <li><a href="tienda.html?cat=escala">Carros escala</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/573156532989" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/mash.racing2" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 Mash Racing Store · Colombia</p>
+        <p class="footer-copy">Hecho con <span style="color:var(--red)">♥</span> para los fans del motorsport</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <i class="ti ti-circle-check"></i>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
