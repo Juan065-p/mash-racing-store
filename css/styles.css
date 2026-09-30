@@ -130,7 +130,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Logo */
 .nav-logo { display: flex; align-items: center; gap: .75rem; }
 .nav-logo-mark { width: 44px; height: 44px; flex-shrink: 0; }
-.nav-logo-mark img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center; display: block; }
+.nav-logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 .logo-text { display: flex; flex-direction: column; line-height: .9; gap: 0; }
 .logo-mash  { font-family: "Barlow Condensed", sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--white); letter-spacing: .02em; line-height: 1; }

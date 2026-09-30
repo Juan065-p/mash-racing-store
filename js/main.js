@@ -3,7 +3,7 @@ function logoHTML() {
   return `
     <a href="index.html" class="nav-logo">
       <div class="nav-logo-mark">
-        <img src="https://ugc.production.linktr.ee/553e50bb-b429-4081-8e0d-9237334f168d_linktree-cropped-16245546-C687-4129-830F-227DFDFCA507.jpeg"
+        <img src="https://ugc.production.linktr.ee/79091f2c-43d2-4fe6-8b72-d2d4feb9e5c2_logo-mash-racing-2026png.png"
              alt="Mash Racing Store" loading="eager">
       </div>
       <div class="logo-text">
@@ -150,11 +150,11 @@ function initTeams() {
   if (!f1Grid || !motoGrid) return;
 
   f1Grid.innerHTML = TEAMS_F1.map(t => `
-    <a href="tienda.html?cat=escala&equipo=${t.filter}" class="team-card"
+    <a href="tienda.html?equipo=${t.filter}" class="team-card"
        style="--team-color:${t.color}">
       <div class="team-flag">${t.flag}</div>
       <div class="team-name"><span>${t.name}</span></div>
-      <div class="team-sub">F1 · Escala</div>
+      <div class="team-sub">F1 · Ropa & Escala</div>
     </a>`).join("");
 
   motoGrid.innerHTML = TEAMS_MOTOGP.map(t => `
@@ -190,27 +190,59 @@ function initTienda() {
   const counter = document.getElementById("catalog-count");
   if (!grid) return;
 
-  function renderCatalog(filter) {
-    const list = filter === "todos"
-      ? PRODUCTS
-      : PRODUCTS.filter(p => p.category === filter);
-    grid.innerHTML = list.map(productCardHTML).join("");
-    if (counter) counter.textContent = `${list.length} productos`;
+  function renderCatalog(catFilter, teamFilter) {
+    let list = PRODUCTS;
+    if (catFilter && catFilter !== "todos") list = list.filter(p => p.category === catFilter);
+    if (teamFilter) list = list.filter(p => p.team === teamFilter);
+    grid.innerHTML = list.length
+      ? list.map(productCardHTML).join("")
+      : `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted)">
+           <i class="ti ti-search-off" style="font-size:2rem"></i>
+           <p style="margin-top:.5rem">No hay productos para esta escudería aún</p>
+         </div>`;
+    if (counter) counter.textContent = `${list.length} producto${list.length !== 1 ? "s" : ""}`;
     bindAddToCart(grid);
-    initReveal(); /* re-run reveal on fresh cards */
+    initReveal();
   }
 
   btns.forEach(btn => {
     btn.addEventListener("click", () => {
       btns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
+      const banner = document.getElementById("team-banner");
+      if (banner) banner.remove();
       renderCatalog(btn.dataset.filter);
     });
   });
 
-  /* pre-filter from URL param */
   const params = new URLSearchParams(location.search);
   const cat    = params.get("cat");
+  const equipo = params.get("equipo");
+
+  if (equipo) {
+    const teamInfo = TEAMS_F1.find(t => t.filter === equipo);
+    /* inject team banner above grid */
+    const banner = document.createElement("div");
+    banner.id = "team-banner";
+    banner.style.cssText = [
+      "display:flex", "align-items:center", "gap:.6rem",
+      "padding:.75rem 1rem", "margin-bottom:1.25rem",
+      "border-left:4px solid " + (teamInfo?.color || "var(--yellow)"),
+      "background:rgba(0,0,0,.35)", "border-radius:0 8px 8px 0",
+      "font-weight:700", "font-size:1.1rem",
+      "color:" + (teamInfo?.color || "var(--yellow)")
+    ].join(";");
+    banner.innerHTML = `${teamInfo?.flag || "🏁"} ${teamInfo?.name || equipo} <span style="color:var(--text-muted);font-weight:400;font-size:.875rem;margin-left:.5rem">— Colección completa</span>`;
+    grid.parentElement?.insertBefore(banner, grid);
+
+    btns.forEach(b => b.classList.remove("active"));
+    const todosBtn = document.querySelector('.filter-btn[data-filter="todos"]');
+    if (todosBtn) todosBtn.classList.add("active");
+
+    renderCatalog(null, equipo);
+    return;
+  }
+
   if (cat) {
     const target = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
     if (target) { target.click(); return; }
