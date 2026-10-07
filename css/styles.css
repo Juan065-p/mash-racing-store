@@ -201,9 +201,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero-title {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(4.5rem,13vw,11rem); font-weight: 900;
-  text-transform: uppercase; line-height: .85; letter-spacing: -.03em;
-  margin-bottom: 1.75rem;
+  font-size: clamp(2.8rem,7vw,5.5rem); font-weight: 900;
+  text-transform: uppercase; line-height: .9; letter-spacing: -.03em;
+  margin-bottom: 1.5rem;
 }
 .hero-title em { color: var(--red); font-style: normal; display: block; }
 .hero-title .yl { color: var(--yellow); }
@@ -547,7 +547,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width:768px) {
   .nav-links { display:none; }
   .nav-burger { display:flex; }
-  .hero-title { font-size:clamp(3.5rem,15vw,6rem); }
+  .hero-title { font-size:clamp(2.4rem,10vw,3.5rem); }
   .hero-stats  { gap:1.5rem; }
   .products-grid { grid-template-columns:repeat(2,1fr); gap:1rem; }
   .footer-top { grid-template-columns:1fr; gap:2.5rem; }
