@@ -185,69 +185,70 @@ function initHome() {
 function initTienda() {
   buildAnnounceBar();
 
-  const grid    = document.getElementById("catalog-grid");
-  const btns    = document.querySelectorAll(".filter-btn");
-  const counter = document.getElementById("catalog-count");
+  const grid       = document.getElementById("catalog-grid");
+  const counter    = document.getElementById("catalog-count");
   if (!grid) return;
 
-  function renderCatalog(catFilter, teamFilter) {
-    let list = PRODUCTS;
-    if (catFilter && catFilter !== "todos") list = list.filter(p => p.category === catFilter);
-    if (teamFilter) list = list.filter(p => p.team === teamFilter);
+  const tipoBtns   = document.querySelectorAll(".filter-btn[data-tipo]");
+  const equipoPills = document.querySelectorAll(".team-pill[data-equipo]");
+
+  let activeTipo   = "todas";
+  let activeEquipo = "todas";
+
+  /* Only F1 ropa + gorras in this page */
+  const F1_CATS = ["ropa", "gorras"];
+
+  function renderCatalog() {
+    let list = PRODUCTS.filter(p => F1_CATS.includes(p.category));
+    if (activeTipo   !== "todas") list = list.filter(p => p.tipo  === activeTipo);
+    if (activeEquipo !== "todas") list = list.filter(p => p.team  === activeEquipo);
+
     grid.innerHTML = list.length
       ? list.map(productCardHTML).join("")
-      : `<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted)">
-           <i class="ti ti-search-off" style="font-size:2rem"></i>
-           <p style="margin-top:.5rem">No hay productos para esta escudería aún</p>
+      : `<div style="grid-column:1/-1;text-align:center;padding:4rem 1rem;color:var(--w60)">
+           <i class="ti ti-search-off" style="font-size:2.5rem;display:block;margin-bottom:.75rem"></i>
+           <p>No hay productos para este filtro</p>
          </div>`;
     if (counter) counter.textContent = `${list.length} producto${list.length !== 1 ? "s" : ""}`;
     bindAddToCart(grid);
     initReveal();
   }
 
-  btns.forEach(btn => {
+  tipoBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      btns.forEach(b => b.classList.remove("active"));
+      tipoBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      const banner = document.getElementById("team-banner");
-      if (banner) banner.remove();
-      renderCatalog(btn.dataset.filter);
+      activeTipo = btn.dataset.tipo;
+      renderCatalog();
     });
   });
 
+  equipoPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      equipoPills.forEach(b => b.classList.remove("active"));
+      pill.classList.add("active");
+      activeEquipo = pill.dataset.equipo;
+      renderCatalog();
+    });
+  });
+
+  /* URL params pre-select filters */
   const params = new URLSearchParams(location.search);
-  const cat    = params.get("cat");
-  const equipo = params.get("equipo");
+  const equipoParam = params.get("equipo");
+  const tipoParam   = params.get("tipo");
 
-  if (equipo) {
-    const teamInfo = TEAMS_F1.find(t => t.filter === equipo);
-    /* inject team banner above grid */
-    const banner = document.createElement("div");
-    banner.id = "team-banner";
-    banner.style.cssText = [
-      "display:flex", "align-items:center", "gap:.6rem",
-      "padding:.75rem 1rem", "margin-bottom:1.25rem",
-      "border-left:4px solid " + (teamInfo?.color || "var(--yellow)"),
-      "background:rgba(0,0,0,.35)", "border-radius:0 8px 8px 0",
-      "font-weight:700", "font-size:1.1rem",
-      "color:" + (teamInfo?.color || "var(--yellow)")
-    ].join(";");
-    banner.innerHTML = `${teamInfo?.flag || "🏁"} ${teamInfo?.name || equipo} <span style="color:var(--text-muted);font-weight:400;font-size:.875rem;margin-left:.5rem">— Colección completa</span>`;
-    grid.parentElement?.insertBefore(banner, grid);
-
-    btns.forEach(b => b.classList.remove("active"));
-    const todosBtn = document.querySelector('.filter-btn[data-filter="todos"]');
-    if (todosBtn) todosBtn.classList.add("active");
-
-    renderCatalog(null, equipo);
-    return;
+  if (equipoParam) {
+    const pill = document.querySelector(`.team-pill[data-equipo="${equipoParam}"]`);
+    if (pill) { pill.click(); return; }
+    activeEquipo = equipoParam;
+  }
+  if (tipoParam) {
+    const btn = document.querySelector(`.filter-btn[data-tipo="${tipoParam}"]`);
+    if (btn) { btn.click(); return; }
+    activeTipo = tipoParam;
   }
 
-  if (cat) {
-    const target = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
-    if (target) { target.click(); return; }
-  }
-  renderCatalog("todos");
+  renderCatalog();
 }
 
 /* ── CARRITO PAGE ───────────────────────────── */

@@ -52,67 +52,67 @@ const IMG = {
 const PRODUCTS = [
   /* ══ ROPA F1 ══════════════════════════════════════ */
   {
-    id: 1, name: "Camiseta Hamilton #44", category: "ropa", team: "Mercedes",
+    id: 1, name: "Camiseta Hamilton #44", category: "ropa", tipo: "camisa", team: "Mercedes",
     price: 75000, badge: "Nuevo", featured: true, emoji: "👕",
     image: IMG.hamilton, sizes: ["S","M","L","XL"],
     description: "Camiseta Lewis Hamilton #44. Diseño bicolor rojo y gris, serigrafía de alta resistencia, 100% algodón peinado."
   },
   {
-    id: 2, name: "Chaqueta Mercedes Petronas", category: "ropa", team: "Mercedes",
+    id: 2, name: "Chaqueta Mercedes Petronas", category: "ropa", tipo: "chaqueta", team: "Mercedes",
     price: 160000, badge: null, featured: true, emoji: "🧥",
     image: IMG.petronasJacket, sizes: ["S","M","L","XL"],
     description: "Chaqueta Mercedes AMG Petronas F1 Team. Tela técnica con bordados oficiales, colores turquesa Petronas."
   },
   {
-    id: 9, name: "Camiseta Mercedes Adidas", category: "ropa", team: "Mercedes",
+    id: 9, name: "Camiseta Mercedes Adidas", category: "ropa", tipo: "camisa", team: "Mercedes",
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: IMG.mercBlue, sizes: ["S","M","L","XL"],
     description: "Camiseta Mercedes AMG F1 Team Adidas. Azul oscuro con logos bordados, tela performance."
   },
   {
-    id: 20, name: "Camiseta Mercedes Blanca", category: "ropa", team: "Mercedes",
+    id: 20, name: "Camiseta Mercedes Blanca", category: "ropa", tipo: "camisa", team: "Mercedes",
     price: 75000, badge: null, featured: true, emoji: "👕",
     image: IMG.mercWhite, sizes: ["S","M","L","XL"],
     description: "Camiseta blanca oficial Mercedes AMG F1. Corte slim fit, logos bordados en pecho."
   },
   {
-    id: 21, name: "Polo Red Bull Oracle", category: "ropa", team: "RedBull",
+    id: 21, name: "Polo Red Bull Oracle", category: "ropa", tipo: "polo", team: "RedBull",
     price: 110000, badge: "Popular", featured: true, emoji: "👕",
     image: IMG.rbPoloModel, sizes: ["S","M","L","XL"],
     description: "Polo oficial Oracle Red Bull Racing con logos TAG Heuer, Honda y ByBit. Tejido técnico navy azul oscuro."
   },
   {
-    id: 22, name: "Polo Red Bull US Grand Prix", category: "ropa", team: "RedBull",
+    id: 22, name: "Polo Red Bull US Grand Prix", category: "ropa", tipo: "polo", team: "RedBull",
     price: 110000, badge: "Limitado", featured: false, emoji: "👕",
     image: IMG.rbPoloHanger, sizes: ["S","M","L","XL"],
     description: "Polo edición especial Red Bull Racing Gran Premio USA. Detalles con bandera americana en costados."
   },
   {
-    id: 23, name: "Camiseta Ferrari Scuderia", category: "ropa", team: "Ferrari",
+    id: 23, name: "Camiseta Ferrari Scuderia", category: "ropa", tipo: "camisa", team: "Ferrari",
     price: 75000, badge: "Nuevo", featured: true, emoji: "👕",
     image: IMG.ferrariShirt, sizes: ["S","M","L","XL"],
     description: "Camiseta oficial Scuderia Ferrari rojo clásico. Logos bordados Puma y el icónico Cavallino Rampante."
   },
   {
-    id: 24, name: "Camiseta Alpine Azul Rey F1", category: "ropa", team: "Alpine",
+    id: 24, name: "Camiseta Alpine Azul Rey F1", category: "ropa", tipo: "camisa", team: "Alpine",
     price: 75000, badge: "Nuevo", featured: true, emoji: "👕",
     image: GD("1qS4qKlNbUy9G_HX0f4gWOHfiY2kxgfpy"), sizes: ["S","M","L","XL"],
     description: "Camiseta Alpine F1 Team azul rey 2026. Diseño oficial con logos BWT y Amazon. 100% algodón."
   },
   {
-    id: 25, name: "Camiseta Alpine Rosa F1", category: "ropa", team: "Alpine",
+    id: 25, name: "Camiseta Alpine Rosa F1", category: "ropa", tipo: "camisa", team: "Alpine",
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: GD("1fs-I0uF0F23FOug9q_w4c8gOcOes9JF2"), sizes: ["S","M","L","XL"],
     description: "Camiseta Alpine F1 Team rosa 2026. Edición especial BWT. Tela suave y fresca."
   },
   {
-    id: 26, name: "Camiseta Aston Martin AMR 2026", category: "ropa", team: "AstonMartin",
+    id: 26, name: "Camiseta Aston Martin AMR 2026", category: "ropa", tipo: "camisa", team: "AstonMartin",
     price: 75000, badge: "Nuevo", featured: true, emoji: "👕",
     image: GD("165ONLBIcG9vCt63MmrMLy_SQRKkIaS3R"), sizes: ["S","M","L","XL"],
     description: "Camiseta Aston Martin Aramco F1 Team AMR 2026. Verde británico con logos Aramco bordados."
   },
   {
-    id: 27, name: "Camiseta Aston Martin Classics", category: "ropa", team: "AstonMartin",
+    id: 27, name: "Camiseta Aston Martin Classics", category: "ropa", tipo: "camisa", team: "AstonMartin",
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: GD("1Td6AEBAyIH8kSWC2opSmN1zSOt32lVgk"), sizes: ["S","M","L","XL"],
     description: "Camiseta Aston Martin F1 edición Classics. Verde oscuro con logo histórico AMR en relieve."
@@ -174,49 +174,49 @@ const PRODUCTS = [
   },
   /* ══ GORRAS ═══════════════════════════════════════ */
   {
-    id: 3, name: "Gorra Mercedes AMG F1", category: "gorras", team: "Mercedes",
+    id: 3, name: "Gorra Mercedes AMG F1", category: "gorras", tipo: "gorra", team: "Mercedes",
     price: 60000, badge: "Popular", featured: true, emoji: "🧢",
     image: IMG.mercCap, sizes: ["Única"],
     description: "Gorra oficial Mercedes AMG F1 Team Adidas. Negro con logo bordado en 3D. Ajuste trasero regulable."
   },
   {
-    id: 4, name: "Gorra Ferrari New Era Roja", category: "gorras", team: "Ferrari",
+    id: 4, name: "Gorra Ferrari New Era Roja", category: "gorras", tipo: "gorra", team: "Ferrari",
     price: 60000, badge: null, featured: true, emoji: "🧢",
     image: IMG.gorraFerrari, sizes: ["Única"],
     description: "Gorra Ferrari New Era rojo clásico. Logo Scuderia Ferrari bordado en frente. Estructura semi-rígida."
   },
   {
-    id: 12, name: "Gorra Red Bull Racing F1", category: "gorras", team: "RedBull",
+    id: 12, name: "Gorra Red Bull Racing F1", category: "gorras", tipo: "gorra", team: "RedBull",
     price: 60000, badge: "Nuevo", featured: false, emoji: "🧢",
     image: IMG.gorraRedBull, sizes: ["Única"],
     description: "Gorra oficial Red Bull Racing New Era. Azul navy con logo Oracle Red Bull. Ajuste trasero Snapback."
   },
   {
-    id: 32, name: "Gorra McLaren Naranja", category: "gorras", team: "McLaren",
+    id: 32, name: "Gorra McLaren Naranja", category: "gorras", tipo: "gorra", team: "McLaren",
     price: 60000, badge: null, featured: false, emoji: "🧢",
     image: IMG.gorraMcLaren, sizes: ["Única"],
     description: "Gorra McLaren F1 Team naranja papaya. Logo McLaren bordado. Edición 2025/2026 temporada F1."
   },
   {
-    id: 33, name: "Gorra Ferrari Sunset Edition", category: "gorras", team: "Ferrari",
+    id: 33, name: "Gorra Ferrari Sunset Edition", category: "gorras", tipo: "gorra", team: "Ferrari",
     price: 65000, badge: "Limitado", featured: false, emoji: "🧢",
     image: IMG.gorraFerrariGrad, sizes: ["Única"],
     description: "Gorra Ferrari edición Sunset. Degradado amarillo-rojo único. Colección especial Scuderia Ferrari."
   },
   {
-    id: 34, name: "Gorra F1 New Era Formula", category: "gorras", team: null,
+    id: 34, name: "Gorra F1 New Era Formula", category: "gorras", tipo: "gorra", team: null,
     price: 65000, badge: null, featured: false, emoji: "🧢",
     image: IMG.gorraF1NewEra, sizes: ["Única"],
     description: "Gorra oficial F1 x New Era. Logo Formula 1 bordado en frente. Colección Formula 1 Official Collection."
   },
   {
-    id: 35, name: "Gorra Pirelli Champion F1", category: "gorras", team: null,
+    id: 35, name: "Gorra Pirelli Champion F1", category: "gorras", tipo: "gorra", team: null,
     price: 60000, badge: null, featured: false, emoji: "🧢",
     image: IMG.pirelliCap, sizes: ["Única"],
     description: "Gorra Pirelli edición Champion. Negro con logo rojo/amarillo bordado y corona de laurel en visera."
   },
   {
-    id: 36, name: "Gorra Red Bull Trucker", category: "gorras", team: "RedBull",
+    id: 36, name: "Gorra Red Bull Trucker", category: "gorras", tipo: "gorra", team: "RedBull",
     price: 60000, badge: null, featured: false, emoji: "🧢",
     image: IMG.gorraRBTrucker, sizes: ["Única"],
     description: "Gorra trucker Red Bull Racing. Frente rígido con logo Oracle Red Bull. Malla trasera ventilada."

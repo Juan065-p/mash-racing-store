@@ -436,7 +436,37 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .filter-btn:hover, .filter-btn.active { border-color:var(--red); color:var(--white); background:var(--red); }
 .filter-btn.yellow.active { background:var(--yellow); border-color:var(--yellow); color:var(--black); }
-.catalog-count { font-size:.82rem; color:var(--gray); }
+.catalog-count { font-size:.82rem; color:var(--gray); margin-top:.5rem; }
+
+/* ── TEAM FILTER PILLS ──────────────────────── */
+.filter-teams {
+  display: flex; align-items: center; gap: .4rem;
+  flex-wrap: wrap; margin: .5rem 0 .25rem;
+}
+.filter-teams-label {
+  font-size: .68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .12em; color: var(--w60); white-space: nowrap;
+  margin-right: .15rem; display: flex; align-items: center; gap: .3rem;
+}
+.team-pill {
+  display: inline-flex; align-items: center; gap: .25rem;
+  padding: .28rem .8rem; font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em;
+  border-radius: 100px;
+  border: 1.5px solid var(--tc, var(--dark-5));
+  color: var(--w60); background: var(--dark-3);
+  transition: var(--ease); white-space: nowrap;
+}
+.team-pill:hover {
+  color: var(--white);
+  border-color: var(--tc, var(--w30));
+  background: var(--dark-4);
+}
+.team-pill.active {
+  background: var(--tc, var(--dark-5));
+  border-color: var(--tc, var(--white));
+  color: var(--white);
+}
 
 /* ── CART PAGE ──────────────────────────────── */
 .cart-page { min-height:100vh; background:var(--black); padding:calc(var(--bar-h)+var(--nav-h)+3rem) 0 5rem; }
