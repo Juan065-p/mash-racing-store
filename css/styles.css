@@ -181,9 +181,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ── HERO ───────────────────────────────────── */
 .hero {
-  min-height: 100vh; display: flex; align-items: flex-end;
-  padding-top: calc(var(--bar-h) + var(--nav-h));
-  padding-bottom: 5rem; position: relative; overflow: hidden;
+  min-height: 70vh; display: flex; align-items: flex-end;
+  padding-top: calc(var(--bar-h) + var(--nav-h) + 2rem);
+  padding-bottom: 3rem; position: relative; overflow: hidden;
   background-color: var(--dark);
   background-image:
     linear-gradient(to right, rgba(6,6,6,.92) 35%, rgba(6,6,6,.5) 70%, rgba(6,6,6,.3) 100%),
@@ -212,7 +212,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero-ctas { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
 
-.hero-stats { display:flex; gap:3rem; margin-top:4rem; padding-top:2rem; border-top:1px solid var(--w10); flex-wrap:wrap; }
+.hero-stats { display:flex; gap:3rem; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--w10); flex-wrap:wrap; }
 .stat-val { font-family:"Barlow Condensed",sans-serif; font-size:2.6rem; font-weight:900; line-height:1; }
 .stat-val em { color:var(--red); font-style:normal; }
 .stat-label { font-size:.68rem; color:var(--gray-l); text-transform:uppercase; letter-spacing:.12em; margin-top:.25rem; }
