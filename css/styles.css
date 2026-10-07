@@ -181,7 +181,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ── HERO ───────────────────────────────────── */
 .hero {
-  min-height: 70vh; display: flex; align-items: flex-end;
+  min-height: 88vh; display: flex; align-items: flex-end;
   padding-top: calc(var(--bar-h) + var(--nav-h) + 2rem);
   padding-bottom: 3rem; position: relative; overflow: hidden;
   background-color: var(--dark);
@@ -190,20 +190,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-slides { position:absolute; inset:0; z-index:0; }
 .hero-slide {
   position:absolute; inset:0;
-  background-size:cover; background-position:center center;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
   opacity:0; transition:opacity 1.3s ease-in-out;
 }
 .hero-slide.active { opacity:1; }
-/* gradient overlay keeps text readable */
+/* gradient overlay: heavy left (text area) → transparent right (photo area) */
 .hero-overlay {
   position:absolute; inset:0; z-index:1; pointer-events:none;
   background:
-    linear-gradient(to right, rgba(6,6,6,.93) 30%, rgba(6,6,6,.55) 65%, rgba(6,6,6,.25) 100%),
-    linear-gradient(to top,   rgba(6,6,6,.85) 0%, transparent 45%);
+    linear-gradient(to right, rgba(6,6,6,.97) 28%, rgba(6,6,6,.65) 55%, rgba(6,6,6,.08) 80%, transparent 100%),
+    linear-gradient(to top,   rgba(6,6,6,.70) 0%, transparent 40%);
 }
 .hero-stripe { position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--red); z-index:3; }
 
-.hero-content { position:relative; z-index:2; max-width:750px; }
+.hero .container { padding-left: 0; padding-right: 0; }
+.hero-content { position:relative; z-index:2; max-width:750px; padding-left: clamp(.75rem,2vw,1.5rem); }
 
 .hero-eyebrow { display:flex; align-items:center; gap:.75rem; margin-bottom:1.75rem; }
 .hero-eyebrow-line { width:40px; height:2px; background:var(--red); }
