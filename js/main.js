@@ -166,9 +166,47 @@ function initTeams() {
     </a>`).join("");
 }
 
+/* ── HERO CAROUSEL ──────────────────────────── */
+function initHeroCarousel() {
+  const container = document.getElementById("hero-slides");
+  if (!container) return;
+
+  const SLIDES = [
+    { img: IMG.hamilton,       label: "Mercedes · Hamilton #44" },
+    { img: IMG.petronasJacket, label: "Mercedes · Petronas" },
+    { img: IMG.mercBlue,       label: "Mercedes · Adidas" },
+    { img: IMG.rbPoloModel,    label: "Red Bull · Oracle" },
+    { img: IMG.rbPoloHanger,   label: "Red Bull · US Grand Prix" },
+    { img: IMG.ferrariShirt,   label: "Ferrari · Scuderia" },
+    { img: GD("1qS4qKlNbUy9G_HX0f4gWOHfiY2kxgfpy"), label: "Alpine · BWT Azul" },
+    { img: GD("1fs-I0uF0F23FOug9q_w4c8gOcOes9JF2"), label: "Alpine · BWT Rosa" },
+    { img: GD("165ONLBIcG9vCt63MmrMLy_SQRKkIaS3R"), label: "Aston Martin · AMR 2026" },
+    { img: GD("1Td6AEBAyIH8kSWC2opSmN1zSOt32lVgk"), label: "Aston Martin · Classics" },
+    { img: IMG.marquez,        label: "MotoGP · Márquez #93" },
+  ];
+
+  /* pre-build all slide divs */
+  SLIDES.forEach((s, i) => {
+    const div = document.createElement("div");
+    div.className = "hero-slide" + (i === 0 ? " active" : "");
+    div.style.backgroundImage = `url(${s.img})`;
+    container.appendChild(div);
+  });
+
+  let current = 0;
+  const slides = container.querySelectorAll(".hero-slide");
+
+  setInterval(() => {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }, 4000);
+}
+
 /* ── HOME PAGE ──────────────────────────────── */
 function initHome() {
   buildAnnounceBar();
+  initHeroCarousel();
 
   /* featured grid */
   const grid = document.getElementById("featured-grid");
