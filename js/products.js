@@ -119,55 +119,55 @@ const PRODUCTS = [
   },
   /* ══ MOTOGP ═══════════════════════════════════════ */
   {
-    id: 15, name: "Polo Márquez #93 MotoGP", category: "motogp", team: null,
+    id: 15, name: "Polo Márquez #93 MotoGP", category: "motogp", tipo: "polo", team: null,
     price: 110000, badge: "Nuevo", featured: true, emoji: "👕",
     image: IMG.marquez, sizes: ["S","M","L","XL"],
     description: "Polo oficial Marc Márquez #93 con logos Monster Energy Repsol Honda. Tejido técnico transpirable."
   },
   {
-    id: 16, name: "Jersey BMW Motorsport MotoGP", category: "motogp", team: null,
+    id: 16, name: "Jersey BMW Motorsport MotoGP", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: null, featured: true, emoji: "👕",
     image: IMG.jBMW, sizes: ["S","M","L","XL"],
     description: "Jersey manga larga BMW Motorrad M Team. Azul marino con logos BMW M Motorsport y Brembp. Tela técnica transpirable."
   },
   {
-    id: 17, name: "Jersey Fox Racing Negro", category: "motogp", team: null,
+    id: 17, name: "Jersey Fox Racing Negro", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: "Limitado", featured: false, emoji: "👕",
     image: IMG.jFoxNegro, sizes: ["S","M","L","XL"],
     description: "Jersey Fox Racing negro manga larga. Logo Fox en pecho y espalda. Poliéster de alta performance para motociclistas."
   },
   {
-    id: 18, name: "Jersey Fox Racing Blanco", category: "motogp", team: null,
+    id: 18, name: "Jersey Fox Racing Blanco", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: IMG.jFoxBlanco, sizes: ["S","M","L","XL"],
     description: "Jersey Fox Racing blanco manga larga. Diseño limpio con logo Fox. Ideal para uso casual y fanáticos del motociclismo."
   },
   {
-    id: 19, name: "Jersey Ducati Márquez #93", category: "motogp", team: null,
+    id: 19, name: "Jersey Ducati Márquez #93", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: IMG.jHondaHRC, sizes: ["S","M","L","XL"],
     description: "Jersey oficial Ducati Corse Marc Márquez #93. Negro con logos Shell, Lenovo y bandera italiana. Colección 2024."
   },
   {
-    id: 28, name: "Jersey KTM Factory Racing", category: "motogp", team: null,
+    id: 28, name: "Jersey KTM Factory Racing", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: IMG.jKTM, sizes: ["S","M","L","XL"],
     description: "Jersey KTM Factory Racing naranja y blanco. Logos Red Bull KTM. Tela técnica de alta calidad."
   },
   {
-    id: 29, name: "Jersey Monster Energy Yamaha", category: "motogp", team: null,
+    id: 29, name: "Jersey Monster Energy Yamaha", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: "Popular", featured: true, emoji: "👕",
     image: IMG.jMonster, sizes: ["S","M","L","XL"],
     description: "Jersey Monster Energy negro con logo verde. Edición especial Monster x Yamaha MotoGP. Manga larga."
   },
   {
-    id: 30, name: "Jersey Kawasaki Racing Team", category: "motogp", team: null,
+    id: 30, name: "Jersey Kawasaki Racing Team", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: IMG.jKawasaki, sizes: ["S","M","L","XL"],
     description: "Jersey Kawasaki Racing Team verde y blanco. Logos Kawasaki Ninja oficiales. Tela performance manga larga."
   },
   {
-    id: 31, name: "Jersey Husqvarna Rockstar", category: "motogp", team: null,
+    id: 31, name: "Jersey Husqvarna Rockstar", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: IMG.jHusqvarna, sizes: ["S","M","L","XL"],
     description: "Jersey Husqvarna Rockstar Edition naranja. Manga larga con logos Husqvarna y Rockstar Energy. Colección Factory."

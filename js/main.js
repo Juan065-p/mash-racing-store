@@ -352,6 +352,80 @@ function renderCart() {
   });
 }
 
+/* ── MOTOGP PAGE ────────────────────────────── */
+function initMotoGP() {
+  buildAnnounceBar();
+
+  const grid    = document.getElementById("catalog-grid");
+  const counter = document.getElementById("catalog-count");
+  if (!grid) return;
+
+  const tipoBtns = document.querySelectorAll(".filter-btn[data-tipo]");
+  let activeTipo = "todas";
+
+  function renderCatalog() {
+    let list = PRODUCTS.filter(p => p.category === "motogp");
+    if (activeTipo !== "todas") list = list.filter(p => p.tipo === activeTipo);
+    grid.innerHTML = list.length
+      ? list.map(productCardHTML).join("")
+      : `<div style="grid-column:1/-1;text-align:center;padding:4rem 1rem;color:var(--w60)">
+           <i class="ti ti-search-off" style="font-size:2.5rem;display:block;margin-bottom:.75rem"></i>
+           <p>No hay productos para este filtro</p>
+         </div>`;
+    if (counter) counter.textContent = `${list.length} producto${list.length !== 1 ? "s" : ""}`;
+    bindAddToCart(grid);
+    initReveal();
+  }
+
+  tipoBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      tipoBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeTipo = btn.dataset.tipo;
+      renderCatalog();
+    });
+  });
+
+  renderCatalog();
+}
+
+/* ── ESCALA PAGE ────────────────────────────── */
+function initEscala() {
+  buildAnnounceBar();
+
+  const grid    = document.getElementById("catalog-grid");
+  const counter = document.getElementById("catalog-count");
+  if (!grid) return;
+
+  const equipoPills = document.querySelectorAll(".team-pill[data-equipo]");
+  let activeEquipo  = "todas";
+
+  function renderCatalog() {
+    let list = PRODUCTS.filter(p => p.category === "escala");
+    if (activeEquipo !== "todas") list = list.filter(p => p.team === activeEquipo);
+    grid.innerHTML = list.length
+      ? list.map(productCardHTML).join("")
+      : `<div style="grid-column:1/-1;text-align:center;padding:4rem 1rem;color:var(--w60)">
+           <i class="ti ti-search-off" style="font-size:2.5rem;display:block;margin-bottom:.75rem"></i>
+           <p>No hay productos para este filtro</p>
+         </div>`;
+    if (counter) counter.textContent = `${list.length} producto${list.length !== 1 ? "s" : ""}`;
+    bindAddToCart(grid);
+    initReveal();
+  }
+
+  equipoPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      equipoPills.forEach(b => b.classList.remove("active"));
+      pill.classList.add("active");
+      activeEquipo = pill.dataset.equipo;
+      renderCatalog();
+    });
+  });
+
+  renderCatalog();
+}
+
 /* ── ROUTER ─────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
   Cart.load();
@@ -361,5 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.dataset.page;
   if (page === "home")    initHome();
   if (page === "tienda")  initTienda();
+  if (page === "motogp")  initMotoGP();
+  if (page === "escala")  initEscala();
   if (page === "carrito") initCarrito();
 });
