@@ -190,7 +190,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-slides { position:absolute; inset:0; z-index:0; }
 .hero-slide {
   position:absolute; inset:0;
-  background-size:cover; background-position:center top;
+  background-size:cover; background-position:center center;
   opacity:0; transition:opacity 1.3s ease-in-out;
 }
 .hero-slide.active { opacity:1; }

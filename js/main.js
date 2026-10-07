@@ -172,17 +172,17 @@ function initHeroCarousel() {
   if (!container) return;
 
   const SLIDES = [
-    { img: IMG.hamilton,       label: "Mercedes · Hamilton #44" },
-    { img: IMG.petronasJacket, label: "Mercedes · Petronas" },
-    { img: IMG.mercBlue,       label: "Mercedes · Adidas" },
-    { img: IMG.rbPoloModel,    label: "Red Bull · Oracle" },
-    { img: IMG.rbPoloHanger,   label: "Red Bull · US Grand Prix" },
-    { img: IMG.ferrariShirt,   label: "Ferrari · Scuderia" },
-    { img: GD("1qS4qKlNbUy9G_HX0f4gWOHfiY2kxgfpy"), label: "Alpine · BWT Azul" },
-    { img: GD("1fs-I0uF0F23FOug9q_w4c8gOcOes9JF2"), label: "Alpine · BWT Rosa" },
-    { img: GD("165ONLBIcG9vCt63MmrMLy_SQRKkIaS3R"), label: "Aston Martin · AMR 2026" },
-    { img: GD("1Td6AEBAyIH8kSWC2opSmN1zSOt32lVgk"), label: "Aston Martin · Classics" },
-    { img: IMG.marquez,        label: "MotoGP · Márquez #93" },
+    { img: "img/teams/ferrari.png",     label: "Ferrari · Leclerc & Hamilton" },
+    { img: "img/teams/redbull.png",     label: "Red Bull · Verstappen & Hadjar" },
+    { img: "img/teams/mercedes.png",    label: "Mercedes · Russell & Antonelli" },
+    { img: "img/teams/mclaren.png",     label: "McLaren · Norris & Piastri" },
+    { img: "img/teams/astonmartin.png", label: "Aston Martin · Alonso & Stroll" },
+    { img: "img/teams/williams.png",    label: "Williams · Sainz & Albon" },
+    { img: "img/teams/alpine.png",      label: "Alpine · Gasly & Colapinto" },
+    { img: "img/teams/audi.png",        label: "Audi · Hülkenberg & Bortoleto" },
+    { img: "img/teams/visacashapp.png", label: "Visa Cash App RB · Lawson & Lindblad" },
+    { img: "img/teams/haas.png",        label: "Haas · Ocon & Bearman" },
+    { img: "img/teams/cadillac.png",    label: "Cadillac · Pérez & Bottas" },
   ];
 
   /* pre-build all slide divs */
