@@ -145,24 +145,47 @@ function bindAddToCart(container) {
 
 /* ── TEAMS SECTION ──────────────────────────── */
 function initTeams() {
-  const f1Grid    = document.getElementById("teams-f1");
-  const motoGrid  = document.getElementById("teams-motogp");
+  const f1Grid   = document.getElementById("teams-f1");
+  const motoGrid = document.getElementById("teams-motogp");
   if (!f1Grid || !motoGrid) return;
 
+  const F1_PHOTOS = {
+    Ferrari:     "img/teams/ferrari.png",
+    RedBull:     "img/teams/redbull.png",
+    Mercedes:    "img/teams/mercedes.png",
+    McLaren:     "img/teams/mclaren.png",
+    Alpine:      "img/teams/alpine.png",
+    AstonMartin: "img/teams/astonmartin.png",
+  };
+
+  const DRIVERS_F1 = {
+    Ferrari:     "Leclerc · Hamilton",
+    RedBull:     "Verstappen · Hadjar",
+    Mercedes:    "Russell · Antonelli",
+    McLaren:     "Norris · Piastri",
+    Alpine:      "Gasly · Colapinto",
+    AstonMartin: "Alonso · Stroll",
+  };
+
   f1Grid.innerHTML = TEAMS_F1.map(t => `
-    <a href="tienda.html?equipo=${t.filter}" class="team-card"
-       style="--team-color:${t.color}">
-      <div class="team-flag">${t.flag}</div>
-      <div class="team-name"><span>${t.name}</span></div>
-      <div class="team-sub">F1 · Ropa & Escala</div>
+    <a href="tienda.html?equipo=${t.filter}" class="team-photo-card" style="--tc:${t.color}">
+      <div class="card-bg" style="background-image:url(${F1_PHOTOS[t.filter]})"></div>
+      <div class="card-overlay"></div>
+      <div class="card-color-bar"></div>
+      <div class="card-body">
+        <div class="card-flag">${t.flag}</div>
+        <div class="card-name">${t.name}</div>
+        <div class="card-sub">${DRIVERS_F1[t.filter]}</div>
+      </div>
     </a>`).join("");
 
   motoGrid.innerHTML = TEAMS_MOTOGP.map(t => `
-    <a href="tienda.html?cat=motogp" class="team-card"
-       style="--team-color:${t.color}">
-      <div class="team-flag">${t.flag}</div>
-      <div class="team-name"><span>${t.name}</span></div>
-      <div class="team-sub">MotoGP · Ropa</div>
+    <a href="motogp.html" class="team-moto-card" style="--tc:${t.color}">
+      <div class="card-body">
+        <div class="card-flag">${t.flag}</div>
+        <div class="card-name">${t.name}</div>
+        <div class="card-sub">MotoGP · Ropa</div>
+      </div>
     </a>`).join("");
 }
 

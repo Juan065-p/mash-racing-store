@@ -232,32 +232,68 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ── TEAMS ──────────────────────────────────── */
 .teams { background: var(--dark); padding: 4rem 0; border-bottom: 1px solid var(--w10); }
-
 .teams-header { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:2.5rem; gap:1rem; flex-wrap:wrap; }
 
-.teams-scroll { display:flex; gap:1rem; overflow-x:auto; padding-bottom:.75rem; scrollbar-width:none; -ms-overflow-style:none; }
-.teams-scroll::-webkit-scrollbar { display:none; }
+.teams-grid-f1   { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+.teams-grid-moto { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
 
-.team-card {
-  flex-shrink: 0; min-width: 150px; padding: 1.25rem 1.5rem;
-  background: var(--dark-3); border-radius: 8px;
-  border: 1px solid var(--dark-4); border-left: 3px solid var(--team-color, var(--red));
-  cursor: pointer; transition: background var(--ease), transform var(--ease), box-shadow var(--ease);
-  display: flex; flex-direction: column; gap: .5rem; text-decoration: none;
+/* Photo card — F1 */
+.team-photo-card {
+  position:relative; border-radius:12px; overflow:hidden;
+  aspect-ratio:3/2; text-decoration:none; display:block;
+  background:var(--dark-3);
+  transition:transform .3s ease, box-shadow .3s ease;
 }
-.team-card:hover {
-  background: color-mix(in srgb, var(--team-color, var(--red)) 10%, var(--dark-3));
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,.4);
+.team-photo-card:hover { transform:translateY(-5px) scale(1.02); box-shadow:0 16px 48px rgba(0,0,0,.55); }
+.team-photo-card .card-bg {
+  position:absolute; inset:0;
+  background-size:cover; background-position:center 15%;
+  transition:transform .5s ease;
 }
-.team-flag { font-size: 1.2rem; }
-.team-name { font-family:"Barlow Condensed",sans-serif; font-size:1rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; line-height:1.1; }
-.team-name span { color:var(--team-color,var(--red)); }
-.team-sub  { font-size:.68rem; color:var(--gray-l); text-transform:uppercase; letter-spacing:.1em; }
+.team-photo-card:hover .card-bg { transform:scale(1.07); }
+.team-photo-card .card-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.92) 0%, rgba(0,0,0,.45) 50%, rgba(0,0,0,.08) 100%);
+}
+.team-photo-card .card-color-bar {
+  position:absolute; bottom:0; left:0; right:0;
+  height:3px; background:var(--tc,var(--red)); z-index:3;
+}
+.team-photo-card .card-body {
+  position:absolute; bottom:0; left:0; right:0;
+  padding:.85rem 1rem 1rem; z-index:2;
+}
+.team-photo-card .card-flag { font-size:.72rem; opacity:.7; margin-bottom:.3rem; }
+.team-photo-card .card-name {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:clamp(1.2rem,2vw,1.65rem); font-weight:900;
+  text-transform:uppercase; color:var(--white);
+  line-height:1; letter-spacing:-.01em;
+  text-shadow:0 2px 10px rgba(0,0,0,.7);
+}
+.team-photo-card .card-sub {
+  font-size:.58rem; text-transform:uppercase;
+  letter-spacing:.13em; color:var(--tc,var(--w60));
+  margin-top:.35rem; font-weight:600;
+}
 
-.teams-divider {
-  width: 1px; background: var(--w10); flex-shrink: 0; align-self: stretch; margin: 0 .5rem;
+/* Color card — MotoGP */
+.team-moto-card {
+  position:relative; border-radius:12px; overflow:hidden;
+  aspect-ratio:3/2; text-decoration:none; display:flex; align-items:flex-end;
+  background:linear-gradient(135deg, color-mix(in srgb,var(--tc) 25%,var(--dark-3)) 0%, var(--dark-3) 100%);
+  border:1.5px solid color-mix(in srgb,var(--tc) 35%,transparent);
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
+.team-moto-card:hover { transform:translateY(-5px); box-shadow:0 16px 40px rgba(0,0,0,.5); border-color:var(--tc); }
+.team-moto-card .card-body { padding:.85rem 1rem; }
+.team-moto-card .card-flag { font-size:1.1rem; margin-bottom:.3rem; }
+.team-moto-card .card-name {
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:clamp(.9rem,1.6vw,1.2rem); font-weight:900;
+  text-transform:uppercase; color:var(--white); line-height:1.1;
+}
+.team-moto-card .card-sub { font-size:.58rem; text-transform:uppercase; letter-spacing:.13em; color:var(--tc); margin-top:.3rem; font-weight:600; }
 
 /* ── EDITORIAL SPLIT ────────────────────────── */
 .editorial { background: var(--black); overflow: hidden; }
@@ -566,6 +602,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .footer-top { grid-template-columns:1fr; gap:2.5rem; }
   .cart-layout { grid-template-columns:1fr; }
   .order-summary { position:static; }
+  .teams-grid-f1   { grid-template-columns:repeat(2,1fr); }
+  .teams-grid-moto { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:480px) {
   .hero-ctas { flex-direction:column; align-items:flex-start; }
