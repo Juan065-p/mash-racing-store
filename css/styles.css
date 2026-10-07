@@ -198,8 +198,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-slides { position:absolute; inset:0; z-index:0; }
 .hero-slide {
   position:absolute; inset:0;
-  background-size: contain;
-  background-position: center center;
+  background-size: auto 80%;
+  background-position: 68% center;
   background-repeat: no-repeat;
   opacity:0; transition:opacity 1.3s ease-in-out;
 }
