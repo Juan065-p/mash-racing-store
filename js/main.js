@@ -195,17 +195,17 @@ function initHeroCarousel() {
   if (!container) return;
 
   const SLIDES = [
-    { img: "img/teams/ferrari.png",     label: "Ferrari · Leclerc & Hamilton" },
-    { img: "img/teams/redbull.png",     label: "Red Bull · Verstappen & Hadjar" },
-    { img: "img/teams/mercedes.png",    label: "Mercedes · Russell & Antonelli" },
-    { img: "img/teams/mclaren.png",     label: "McLaren · Norris & Piastri" },
-    { img: "img/teams/astonmartin.png", label: "Aston Martin · Alonso & Stroll" },
-    { img: "img/teams/williams.png",    label: "Williams · Sainz & Albon" },
-    { img: "img/teams/alpine.png",      label: "Alpine · Gasly & Colapinto" },
-    { img: "img/teams/audi.png",        label: "Audi · Hülkenberg & Bortoleto" },
-    { img: "img/teams/visacashapp.png", label: "Visa Cash App RB · Lawson & Lindblad" },
-    { img: "img/teams/haas.png",        label: "Haas · Ocon & Bearman" },
-    { img: "img/teams/cadillac.png",    label: "Cadillac · Pérez & Bottas" },
+    { img: "img/cars/ferrari.png",     label: "Ferrari · F1 2026" },
+    { img: "img/cars/redbull.png",     label: "Red Bull Racing · F1 2026" },
+    { img: "img/cars/mercedes.png",    label: "Mercedes · F1 2026" },
+    { img: "img/cars/mclaren.png",     label: "McLaren · F1 2026" },
+    { img: "img/cars/astonmartin.png", label: "Aston Martin · F1 2026" },
+    { img: "img/cars/williams.png",    label: "Williams · F1 2026" },
+    { img: "img/cars/alpine.png",      label: "Alpine · F1 2026" },
+    { img: "img/cars/audi.png",        label: "Audi · F1 2026" },
+    { img: "img/cars/racingbulls.png", label: "Racing Bulls · F1 2026" },
+    { img: "img/cars/haas.png",        label: "Haas · F1 2026" },
+    { img: "img/cars/cadillac.png",    label: "Cadillac · F1 2026" },
   ];
 
   /* pre-build all slide divs */

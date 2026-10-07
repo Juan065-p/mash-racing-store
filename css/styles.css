@@ -199,7 +199,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-slide {
   position:absolute; inset:0;
   background-size: contain;
-  background-position: right center;
+  background-position: center center;
   background-repeat: no-repeat;
   opacity:0; transition:opacity 1.3s ease-in-out;
 }
@@ -208,8 +208,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-overlay {
   position:absolute; inset:0; z-index:1; pointer-events:none;
   background:
-    linear-gradient(to right, rgba(6,6,6,.97) 28%, rgba(6,6,6,.65) 55%, rgba(6,6,6,.08) 80%, transparent 100%),
-    linear-gradient(to top,   rgba(6,6,6,.70) 0%, transparent 40%);
+    linear-gradient(to right, rgba(6,6,6,.98) 22%, rgba(6,6,6,.72) 45%, rgba(6,6,6,.25) 70%, rgba(6,6,6,.55) 100%),
+    linear-gradient(to top,   rgba(6,6,6,.80) 0%, transparent 35%),
+    linear-gradient(to bottom, rgba(6,6,6,.60) 0%, transparent 20%);
 }
 .hero-stripe { position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--red); z-index:3; }
 
