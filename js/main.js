@@ -93,6 +93,32 @@ function initReveal() {
   document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
 }
 
+/* ── COUNTER ANIMATION ──────────────────────── */
+function initCounters() {
+  const els = document.querySelectorAll("[data-count]");
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      obs.unobserve(e.target);
+      const target = parseFloat(e.target.dataset.count);
+      const prefix = e.target.dataset.prefix || "";
+      const suffix = e.target.dataset.suffix || "";
+      const duration = 1400;
+      const start = performance.now();
+      const isInt = Number.isInteger(target);
+      (function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const val = target * eased;
+        e.target.textContent = prefix + (isInt ? Math.round(val) : val.toFixed(1)) + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      })(start);
+    });
+  }, { threshold: 0.5 });
+  els.forEach(el => obs.observe(el));
+}
+
 /* ── PRODUCT CARD ───────────────────────────── */
 function productCardHTML(p) {
   const price = formatPrice(p.price);
@@ -234,6 +260,7 @@ function initHeroCarousel() {
 function initHome() {
   buildAnnounceBar();
   initHeroCarousel();
+  initCounters();
 
   /* featured grid */
   const grid = document.getElementById("featured-grid");

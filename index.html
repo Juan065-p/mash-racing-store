@@ -58,47 +58,57 @@
     <div class="hero-slides" id="hero-slides"></div>
     <div class="hero-overlay"></div>
     <div class="hero-stripe"></div>
-    <div class="hero-speed-lines"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-eyebrow reveal">
-          <div class="hero-eyebrow-line"></div>
-          <span>Colombia · F1 · MotoGP · 2026</span>
-        </div>
 
-        <h1 class="hero-title reveal reveal-delay-1">
-          <em>Pasión</em>
-          <span class="outline">en alta</span>
-          <span class="yl">velocidad</span>
-        </h1>
+    <!-- animated speed lines -->
+    <div class="hero-anim-lines" aria-hidden="true">
+      <div class="hal-line"></div>
+      <div class="hal-line"></div>
+      <div class="hal-line"></div>
+      <div class="hal-line"></div>
+    </div>
 
-        <p class="hero-sub reveal reveal-delay-2">
-          Merchandising oficial F1 y MotoGP. Ropa, gorras, llaveros y coleccionables de tus escuderías y pilotos favoritos.
-        </p>
+    <div class="hero-content">
 
-        <div class="hero-ctas reveal reveal-delay-3">
-          <a href="tienda.html" class="btn btn-primary">
-            <i class="ti ti-shopping-bag"></i>Ver tienda
-          </a>
-          <a href="tienda.html?cat=escala" class="btn btn-outline">
-            <i class="ti ti-car"></i>Carros escala
-          </a>
-        </div>
+      <!-- pill tags -->
+      <div class="hero-eyebrow">
+        <span class="hero-tag">🇨🇴 Colombia</span>
+        <span class="hero-tag">F1 · MotoGP</span>
+        <span class="hero-tag">Temporada 2026</span>
+      </div>
+
+      <!-- MASSIVE title -->
+      <h1 class="hero-title">
+        <span class="htl"><span class="htw htw-1">MASH</span></span>
+        <span class="htl"><span class="htw htw-2">RACING</span></span>
+      </h1>
+
+      <p class="hero-sub">
+        Ropa, gorras, llaveros y coleccionables F1 y MotoGP.<br>
+        La tienda oficial de los fans en Colombia.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="tienda.html" class="btn btn-primary">
+          <i class="ti ti-shopping-bag"></i>Ver tienda
+        </a>
+        <a href="https://wa.me/573156532989" target="_blank" rel="noopener" class="btn btn-outline">
+          <i class="ti ti-brand-whatsapp"></i>WhatsApp
+        </a>
       </div>
     </div>
 
-    <!-- stats bar pinned to hero bottom -->
-    <div class="hero-stats-bar reveal">
+    <!-- stats bar -->
+    <div class="hero-stats-bar">
       <div class="hero-stat-item">
-        <div class="hero-stat-val">+<em>38</em></div>
+        <div class="hero-stat-val"><em data-count="38" data-prefix="+">+38</em></div>
         <div class="hero-stat-lbl">Productos en tienda</div>
       </div>
       <div class="hero-stat-item">
-        <div class="hero-stat-val"><em>10</em></div>
+        <div class="hero-stat-val"><em data-count="10">10</em></div>
         <div class="hero-stat-lbl">Escuderías F1 2026</div>
       </div>
       <div class="hero-stat-item">
-        <div class="hero-stat-val"><em>4</em></div>
+        <div class="hero-stat-val"><em data-count="4">4</em></div>
         <div class="hero-stat-lbl">Equipos MotoGP</div>
       </div>
       <div class="hero-stat-item">
@@ -134,7 +144,8 @@
   <!-- TEAMS -->
   <section class="teams">
     <div class="container">
-      <div class="teams-header">
+      <div class="teams-header" style="position:relative">
+        <span class="section-num" aria-hidden="true">01</span>
         <div>
           <div class="eyebrow reveal">Nuestras escuderías</div>
           <h2 class="section-title reveal reveal-delay-1">Elige tu <span>equipo</span></h2>
@@ -261,7 +272,8 @@
   <!-- FEATURED PRODUCTS -->
   <section class="products section">
     <div class="container">
-      <div class="products-header">
+      <div class="products-header" style="position:relative">
+        <span class="section-num" aria-hidden="true">02</span>
         <div>
           <div class="eyebrow reveal">Más populares</div>
           <h2 class="section-title reveal reveal-delay-1">Destacados <span>de la tienda</span></h2>
@@ -299,7 +311,8 @@
   <!-- ABOUT -->
   <section class="about section">
     <div class="container">
-      <div class="about-inner">
+      <div class="about-inner" style="position:relative">
+        <span class="section-num" style="right:auto;left:0;color:rgba(255,255,255,.02)" aria-hidden="true">03</span>
         <div class="about-visual reveal">
           <div class="about-visual-placeholder">
             <div class="about-stat-block">
