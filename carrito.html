@@ -22,10 +22,76 @@
 
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="tienda.html?cat=ropa">F1 Ropa</a></li>
-        <li><a href="tienda.html?cat=motogp">MotoGP</a></li>
-        <li><a href="tienda.html?cat=escala">Escala</a></li>
+
+        <li class="has-dropdown">
+          <a href="tienda.html">F1 Ropa <i class="ti ti-chevron-down nav-arrow"></i></a>
+          <div class="nav-dropdown nav-dropdown-2col">
+            <div class="nav-dropdown-col">
+              <div class="nav-dropdown-label"><i class="ti ti-flag-checkered"></i>Escuderías</div>
+              <a href="tienda.html?equipo=Ferrari"><i class="ti ti-flag-checkered"></i>Ferrari</a>
+              <a href="tienda.html?equipo=RedBull"><i class="ti ti-flag-checkered"></i>Red Bull Racing</a>
+              <a href="tienda.html?equipo=Mercedes"><i class="ti ti-flag-checkered"></i>Mercedes AMG</a>
+              <a href="tienda.html?equipo=McLaren"><i class="ti ti-flag-checkered"></i>McLaren</a>
+              <a href="tienda.html?equipo=Alpine"><i class="ti ti-flag-checkered"></i>Alpine</a>
+              <a href="tienda.html?equipo=AstonMartin"><i class="ti ti-flag-checkered"></i>Aston Martin</a>
+              <a href="tienda.html" class="nav-dd-all"><i class="ti ti-arrow-right"></i>Ver todas las escuderías</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <div class="nav-dropdown-label"><i class="ti ti-shirt"></i>Categorías</div>
+              <a href="tienda.html?cat=gorras"><i class="ti ti-sun"></i>Gorras</a>
+              <a href="tienda.html?cat=ropa"><i class="ti ti-shirt"></i>Camisetas &amp; Polos</a>
+              <a href="tienda.html?cat=ropa&tipo=chaqueta"><i class="ti ti-coat"></i>Chaquetas</a>
+              <a href="tienda.html?cat=llaveros"><i class="ti ti-key"></i>Llaveros</a>
+              <a href="tienda.html?cat=escala"><i class="ti ti-car"></i>Carros a escala</a>
+              <a href="tienda.html" class="nav-dd-all"><i class="ti ti-arrow-right"></i>Ver todo F1</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="motogp.html">MotoGP <i class="ti ti-chevron-down nav-arrow"></i></a>
+          <div class="nav-dropdown nav-dropdown-2col">
+            <div class="nav-dropdown-col">
+              <div class="nav-dropdown-label"><i class="ti ti-motorbike"></i>Equipos</div>
+              <a href="motogp.html"><i class="ti ti-motorbike"></i>Ducati Lenovo</a>
+              <a href="motogp.html"><i class="ti ti-motorbike"></i>Repsol Honda</a>
+              <a href="motogp.html"><i class="ti ti-motorbike"></i>Pramac Ducati</a>
+              <a href="motogp.html"><i class="ti ti-motorbike"></i>Monster Yamaha</a>
+              <a href="motogp.html" class="nav-dd-all"><i class="ti ti-arrow-right"></i>Ver todos</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <div class="nav-dropdown-label"><i class="ti ti-shirt"></i>Ropa MotoGP</div>
+              <a href="motogp.html"><i class="ti ti-shirt"></i>Camisetas</a>
+              <a href="motogp.html"><i class="ti ti-shirt"></i>Polos</a>
+              <a href="motogp.html"><i class="ti ti-coat"></i>Chaquetas</a>
+              <a href="motogp.html" class="nav-dd-all"><i class="ti ti-arrow-right"></i>Ver todo MotoGP</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="escala.html">Escala <i class="ti ti-chevron-down nav-arrow"></i></a>
+          <div class="nav-dropdown nav-dropdown-sm">
+            <div class="nav-dropdown-col">
+              <div class="nav-dropdown-label"><i class="ti ti-car"></i>Carros a Escala</div>
+              <a href="escala.html?marca=bburago"><i class="ti ti-car"></i>Bburago 1:43</a>
+              <a href="escala.html?marca=hot-wheels"><i class="ti ti-car"></i>Hot Wheels F1</a>
+              <a href="escala.html"><i class="ti ti-car"></i>Escala 1:18</a>
+              <a href="escala.html" class="nav-dd-all"><i class="ti ti-arrow-right"></i>Ver toda la colección</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="#">Contacto <i class="ti ti-chevron-down nav-arrow"></i></a>
+          <div class="nav-dropdown nav-dropdown-contact">
+            <div class="nav-dropdown-col">
+              <div class="nav-dropdown-label"><i class="ti ti-message"></i>Escríbenos</div>
+              <a href="https://wa.me/573156532989" target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+              <a href="https://www.instagram.com/mash.racing2" target="_blank" rel="noopener"><i class="ti ti-brand-instagram"></i>@mash.racing2</a>
+            </div>
+          </div>
+        </li>
       </ul>
 
       <div class="nav-actions">
@@ -47,10 +113,13 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" role="menu">
     <a href="index.html">Inicio</a>
-    <a href="tienda.html">Tienda</a>
-    <a href="tienda.html?cat=ropa">F1 Ropa</a>
-    <a href="tienda.html?cat=motogp">MotoGP</a>
-    <a href="tienda.html?cat=escala">Carros Escala</a>
+    <a href="tienda.html">F1 Ropa</a>
+    <a href="tienda.html?equipo=Ferrari" style="font-size:1.1rem;padding-left:1rem;opacity:.7">— Ferrari</a>
+    <a href="tienda.html?equipo=RedBull" style="font-size:1.1rem;padding-left:1rem;opacity:.7">— Red Bull</a>
+    <a href="tienda.html?equipo=Mercedes" style="font-size:1.1rem;padding-left:1rem;opacity:.7">— Mercedes</a>
+    <a href="motogp.html">MotoGP</a>
+    <a href="escala.html">Autos a Escala</a>
+    <a href="https://wa.me/573156532989" target="_blank" rel="noopener">WhatsApp</a>
     <a href="carrito.html">Carrito</a>
   </div>
 
