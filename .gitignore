@@ -2,3 +2,9 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
+dist/
+dist-server/
+.env
+.env.local
+test-results/
+playwright-report/

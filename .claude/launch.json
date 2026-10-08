@@ -1,11 +1,17 @@
-﻿{
+{
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "Mash Racing",
-      "runtimeExecutable": "node",
-      "runtimeArgs": ["-e", "const h=require('http'),fs=require('fs'),p=require('path'),R='C:/Users/USUARIO/Desktop/Mash racing',M={'.html':'text/html','.css':'text/css','.js':'application/javascript','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};h.createServer((req,res)=>{let u=req.url.split('?')[0];let fp=p.join(R,u==='/'?'/index.html':u);if(!fs.existsSync(fp)){res.writeHead(404);res.end('Not found');return;}res.writeHead(200,{'Content-Type':M[p.extname(fp)]||'text/plain'});fs.createReadStream(fp).pipe(res);}).listen(3456,()=>console.log('OK'));"],
-      "port": 3456
+      "name": "Mash Racing (dev)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "5173"],
+      "port": 5173
+    },
+    {
+      "name": "Mash Racing (dist, como Netlify)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "preview"],
+      "port": 4173
     }
   ]
 }

@@ -49,7 +49,7 @@ const IMG = {
   jNavy:           GD("1uIcGci4RD_ffvDrLg-XcY851DSv4WFxO"),
 };
 
-const PRODUCTS = [
+export const PRODUCTS = [
   /* ══ ROPA F1 ══════════════════════════════════════ */
   {
     id: 1, name: "Camiseta Hamilton #44", category: "ropa", tipo: "camisa", team: "Mercedes",
@@ -61,7 +61,7 @@ const PRODUCTS = [
     id: 2, name: "Chaqueta Mercedes Petronas", category: "ropa", tipo: "chaqueta", team: "Mercedes",
     price: 160000, badge: null, featured: true, emoji: "🧥",
     image: IMG.petronasJacket, sizes: ["S","M","L","XL"],
-    description: "Chaqueta Mercedes AMG Petronas F1 Team. Tela técnica con bordados oficiales, colores turquesa Petronas."
+    description: "Chaqueta Mercedes AMG Petronas F1 Team. Tela técnica con bordados, colores turquesa Petronas."
   },
   {
     id: 9, name: "Camiseta Mercedes Adidas", category: "ropa", tipo: "camisa", team: "Mercedes",
@@ -73,13 +73,13 @@ const PRODUCTS = [
     id: 20, name: "Camiseta Mercedes Blanca", category: "ropa", tipo: "camisa", team: "Mercedes",
     price: 75000, badge: null, featured: true, emoji: "👕",
     image: IMG.mercWhite, sizes: ["S","M","L","XL"],
-    description: "Camiseta blanca oficial Mercedes AMG F1. Corte slim fit, logos bordados en pecho."
+    description: "Camiseta blanca Mercedes AMG F1. Corte slim fit, logos bordados en pecho."
   },
   {
     id: 21, name: "Polo Red Bull Oracle", category: "ropa", tipo: "polo", team: "RedBull",
     price: 110000, badge: "Popular", featured: true, emoji: "👕",
     image: IMG.rbPoloModel, sizes: ["S","M","L","XL"],
-    description: "Polo oficial Oracle Red Bull Racing con logos TAG Heuer, Honda y ByBit. Tejido técnico navy azul oscuro."
+    description: "Polo Oracle Red Bull Racing con logos TAG Heuer, Honda y ByBit. Tejido técnico navy azul oscuro."
   },
   {
     id: 22, name: "Polo Red Bull US Grand Prix", category: "ropa", tipo: "polo", team: "RedBull",
@@ -91,13 +91,13 @@ const PRODUCTS = [
     id: 23, name: "Camiseta Ferrari Scuderia", category: "ropa", tipo: "camisa", team: "Ferrari",
     price: 75000, badge: "Nuevo", featured: true, emoji: "👕",
     image: IMG.ferrariShirt, sizes: ["S","M","L","XL"],
-    description: "Camiseta oficial Scuderia Ferrari rojo clásico. Logos bordados Puma y el icónico Cavallino Rampante."
+    description: "Camiseta Scuderia Ferrari rojo clásico. Logos bordados Puma y el icónico Cavallino Rampante."
   },
   {
     id: 24, name: "Camiseta Alpine Azul Rey F1", category: "ropa", tipo: "camisa", team: "Alpine",
     price: 75000, badge: "Nuevo", featured: true, emoji: "👕",
     image: GD("1qS4qKlNbUy9G_HX0f4gWOHfiY2kxgfpy"), sizes: ["S","M","L","XL"],
-    description: "Camiseta Alpine F1 Team azul rey 2026. Diseño oficial con logos BWT y Amazon. 100% algodón."
+    description: "Camiseta Alpine F1 Team azul rey 2026. Diseño con logos BWT y Amazon. 100% algodón."
   },
   {
     id: 25, name: "Camiseta Alpine Rosa F1", category: "ropa", tipo: "camisa", team: "Alpine",
@@ -122,7 +122,7 @@ const PRODUCTS = [
     id: 15, name: "Polo Márquez #93 MotoGP", category: "motogp", tipo: "polo", team: null,
     price: 110000, badge: "Nuevo", featured: true, emoji: "👕",
     image: IMG.marquez, sizes: ["S","M","L","XL"],
-    description: "Polo oficial Marc Márquez #93 con logos Monster Energy Repsol Honda. Tejido técnico transpirable."
+    description: "Polo Marc Márquez #93 con logos Monster Energy Repsol Honda. Tejido técnico transpirable."
   },
   {
     id: 16, name: "Jersey BMW Motorsport MotoGP", category: "motogp", tipo: "jersey", team: null,
@@ -146,7 +146,7 @@ const PRODUCTS = [
     id: 19, name: "Jersey Ducati Márquez #93", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: IMG.jHondaHRC, sizes: ["S","M","L","XL"],
-    description: "Jersey oficial Ducati Corse Marc Márquez #93. Negro con logos Shell, Lenovo y bandera italiana. Colección 2024."
+    description: "Jersey Ducati Corse Marc Márquez #93. Negro con logos Shell, Lenovo y bandera italiana. Colección 2024."
   },
   {
     id: 28, name: "Jersey KTM Factory Racing", category: "motogp", tipo: "jersey", team: null,
@@ -164,7 +164,7 @@ const PRODUCTS = [
     id: 30, name: "Jersey Kawasaki Racing Team", category: "motogp", tipo: "jersey", team: null,
     price: 75000, badge: null, featured: false, emoji: "👕",
     image: IMG.jKawasaki, sizes: ["S","M","L","XL"],
-    description: "Jersey Kawasaki Racing Team verde y blanco. Logos Kawasaki Ninja oficiales. Tela performance manga larga."
+    description: "Jersey Kawasaki Racing Team verde y blanco. Logos Kawasaki Ninja. Tela performance manga larga."
   },
   {
     id: 31, name: "Jersey Husqvarna Rockstar", category: "motogp", tipo: "jersey", team: null,
@@ -177,7 +177,7 @@ const PRODUCTS = [
     id: 3, name: "Gorra Mercedes AMG F1", category: "gorras", tipo: "gorra", team: "Mercedes",
     price: 60000, badge: "Popular", featured: true, emoji: "🧢",
     image: IMG.mercCap, sizes: ["Única"],
-    description: "Gorra oficial Mercedes AMG F1 Team Adidas. Negro con logo bordado en 3D. Ajuste trasero regulable."
+    description: "Gorra Mercedes AMG F1 Team Adidas. Negro con logo bordado en 3D. Ajuste trasero regulable."
   },
   {
     id: 4, name: "Gorra Ferrari New Era Roja", category: "gorras", tipo: "gorra", team: "Ferrari",
@@ -189,7 +189,7 @@ const PRODUCTS = [
     id: 12, name: "Gorra Red Bull Racing F1", category: "gorras", tipo: "gorra", team: "RedBull",
     price: 60000, badge: "Nuevo", featured: false, emoji: "🧢",
     image: IMG.gorraRedBull, sizes: ["Única"],
-    description: "Gorra oficial Red Bull Racing New Era. Azul navy con logo Oracle Red Bull. Ajuste trasero Snapback."
+    description: "Gorra Red Bull Racing New Era. Azul navy con logo Oracle Red Bull. Ajuste trasero Snapback."
   },
   {
     id: 32, name: "Gorra McLaren Naranja", category: "gorras", tipo: "gorra", team: "McLaren",
@@ -207,7 +207,7 @@ const PRODUCTS = [
     id: 34, name: "Gorra F1 New Era Formula", category: "gorras", tipo: "gorra", team: null,
     price: 65000, badge: null, featured: false, emoji: "🧢",
     image: IMG.gorraF1NewEra, sizes: ["Única"],
-    description: "Gorra oficial F1 x New Era. Logo Formula 1 bordado en frente. Colección Formula 1 Official Collection."
+    description: "Gorra F1 x New Era. Logo Formula 1 bordado en frente. Colección Formula 1 Official Collection."
   },
   {
     id: 35, name: "Gorra Pirelli Champion F1", category: "gorras", tipo: "gorra", team: null,
@@ -223,37 +223,37 @@ const PRODUCTS = [
   },
   /* ══ LLAVEROS ══════════════════════════════════════ */
   {
-    id: 5, name: "Set Llaveros F1 Blancos", category: "llaveros", team: null,
+    id: 5, name: "Set Llaveros F1 Blancos", category: "llaveros", tipo: "llavero", team: null,
     price: 8000, badge: null, featured: true, emoji: "🔑",
     image: IMG.llBlancos, sizes: ["Única"],
     description: "Llaveros PVC F1 blancos con logos de escuderías. Caucho de alta calidad, argolla metálica inoxidable."
   },
   {
-    id: 6, name: "Llavero Ferrari Rojo F1", category: "llaveros", team: "Ferrari",
+    id: 6, name: "Llavero Ferrari Rojo F1", category: "llaveros", tipo: "llavero", team: "Ferrari",
     price: 8000, badge: null, featured: false, emoji: "🔑",
     image: IMG.llRojo, sizes: ["Única"],
     description: "Llavero PVC Ferrari rojo con Cavallino Rampante. Acabado brillante, argolla metálica dorada."
   },
   {
-    id: 11, name: "Llavero McLaren F1", category: "llaveros", team: "McLaren",
+    id: 11, name: "Llavero McLaren F1", category: "llaveros", tipo: "llavero", team: "McLaren",
     price: 8000, badge: null, featured: false, emoji: "🔑",
     image: IMG.llMcLaren, sizes: ["Única"],
     description: "Llavero PVC McLaren F1 naranja papaya. Logo McLaren en relieve. Argolla metálica inoxidable."
   },
   {
-    id: 14, name: "Llavero Mercedes F1", category: "llaveros", team: "Mercedes",
+    id: 14, name: "Llavero Mercedes F1", category: "llaveros", tipo: "llavero", team: "Mercedes",
     price: 8000, badge: null, featured: false, emoji: "🔑",
     image: IMG.llMercedes, sizes: ["Única"],
     description: "Llavero PVC Mercedes AMG F1. Estrella de tres puntas en relieve plateado. Acabado cromado."
   },
   {
-    id: 37, name: "Llavero Edición Mónaco", category: "llaveros", team: null,
+    id: 37, name: "Llavero Edición Mónaco", category: "llaveros", tipo: "llavero", team: null,
     price: 8000, badge: "Limitado", featured: false, emoji: "🔑",
     image: IMG.llMonaco, sizes: ["Única"],
     description: "Llavero especial Gran Premio de Mónaco. Diseño icónico del circuito callejero más famoso de F1."
   },
   {
-    id: 38, name: "Llavero Hamilton #44 PVC", category: "llaveros", team: "Mercedes",
+    id: 38, name: "Llavero Hamilton #44 PVC", category: "llaveros", tipo: "llavero", team: "Mercedes",
     price: 8000, badge: null, featured: false, emoji: "🔑",
     image: IMG.hamKeychain, sizes: ["Única"],
     description: "Llavero PVC Lewis Hamilton #44 HAM. Caucho de alta calidad, argolla metálica inoxidable."
@@ -285,7 +285,7 @@ const PRODUCTS = [
   }
 ];
 
-const CATEGORY_META = {
+export const CATEGORY_META = {
   ropa:     { label: "Ropa F1",       icon: "ti-shirt",     sub: "Camisetas · Hoodies · Polos",  color: "#E10600" },
   motogp:   { label: "MotoGP",        icon: "ti-motorbike", sub: "Polos · Jerseys · Chaquetas",  color: "#FFD200" },
   gorras:   { label: "Gorras",        icon: "ti-sun",       sub: "Snapback · Trucker · New Era", color: "#FFFFFF" },
@@ -293,7 +293,7 @@ const CATEGORY_META = {
   escala:   { label: "Carros escala", icon: "ti-car",       sub: "F1 · 1:64 · Bburago",          color: "#E10600" }
 };
 
-const TEAMS_F1 = [
+export const TEAMS_F1 = [
   { name: "Ferrari",       color: "#E8002D", bg: "#1A0000", flag: "🇮🇹", filter: "Ferrari"     },
   { name: "Red Bull",      color: "#3671C6", bg: "#00001A", flag: "🇦🇹", filter: "RedBull"     },
   { name: "Mercedes",      color: "#27F4D2", bg: "#001A17", flag: "🇩🇪", filter: "Mercedes"    },
@@ -302,16 +302,10 @@ const TEAMS_F1 = [
   { name: "Aston Martin",  color: "#358C75", bg: "#001A14", flag: "🇬🇧", filter: "AstonMartin" }
 ];
 
-const TEAMS_MOTOGP = [
+export const TEAMS_MOTOGP = [
   { name: "Ducati Lenovo",  color: "#CC0000", bg: "#1A0000", flag: "🇮🇹" },
   { name: "Repsol Honda",   color: "#CC1200", bg: "#1A0000", flag: "🇯🇵" },
   { name: "Monster Yamaha", color: "#004B93", bg: "#00001A", flag: "🇯🇵" },
   { name: "Aprilia RS-GP",  color: "#5F0095", bg: "#0D0016", flag: "🇮🇹" }
 ];
 
-function formatPrice(n) {
-  return new Intl.NumberFormat("es-CO", {
-    style: "currency", currency: "COP",
-    minimumFractionDigits: 0, maximumFractionDigits: 0
-  }).format(n);
-}

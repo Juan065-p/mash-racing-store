@@ -1,0 +1,9 @@
+# URLs del sitio estático anterior -> rutas limpias (301, con "!" para que apliquen aunque exista un archivo).
+/index.html          /          301!
+/tienda.html         /tienda    301!
+/motogp.html         /motogp    301!
+/escala.html         /escala    301!
+/carrito.html        /carrito   301!
+/admin/index.html    /admin     301!
+/admin/              /admin     301!
+# Sin comodín SPA: cada ruta está prerenderizada y lo desconocido devuelve 404.html con estado 404.
