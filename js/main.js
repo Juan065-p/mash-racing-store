@@ -217,49 +217,9 @@ function initTeams() {
     </a>`).join("");
 }
 
-/* ── HERO CAROUSEL ──────────────────────────── */
-function initHeroCarousel() {
-  const container = document.getElementById("hero-slides");
-  if (!container) return;
-
-  const defaultSlides = [
-    { img: "img/cars/ferrari.png",     label: "Ferrari · F1 2026" },
-    { img: "img/cars/redbull.png",     label: "Red Bull Racing · F1 2026" },
-    { img: "img/cars/mercedes.png",    label: "Mercedes · F1 2026" },
-    { img: "img/cars/mclaren.png",     label: "McLaren · F1 2026" },
-    { img: "img/cars/astonmartin.png", label: "Aston Martin · F1 2026" },
-    { img: "img/cars/williams.png",    label: "Williams · F1 2026" },
-    { img: "img/cars/alpine.png",      label: "Alpine · F1 2026" },
-    { img: "img/cars/audi.png",        label: "Audi · F1 2026" },
-    { img: "img/cars/racingbulls.png", label: "Racing Bulls · F1 2026" },
-    { img: "img/cars/haas.png",        label: "Haas · F1 2026" },
-    { img: "img/cars/cadillac.png",    label: "Cadillac · F1 2026" },
-  ];
-  const savedSlides = localStorage.getItem("mr_slides");
-  const SLIDES = savedSlides ? JSON.parse(savedSlides) : defaultSlides;
-
-  /* pre-build all slide divs */
-  SLIDES.forEach((s, i) => {
-    const div = document.createElement("div");
-    div.className = "hero-slide" + (i === 0 ? " active" : "");
-    div.style.backgroundImage = `url(${s.img})`;
-    container.appendChild(div);
-  });
-
-  let current = 0;
-  const slides = container.querySelectorAll(".hero-slide");
-
-  setInterval(() => {
-    slides[current].classList.remove("active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
-  }, 4000);
-}
-
 /* ── HOME PAGE ──────────────────────────────── */
 function initHome() {
   buildAnnounceBar();
-  initHeroCarousel();
   initCounters();
 
   /* featured grid */
