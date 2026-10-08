@@ -58,17 +58,18 @@
     <div class="hero-slides" id="hero-slides"></div>
     <div class="hero-overlay"></div>
     <div class="hero-stripe"></div>
+    <div class="hero-speed-lines"></div>
     <div class="container">
       <div class="hero-content">
         <div class="hero-eyebrow reveal">
           <div class="hero-eyebrow-line"></div>
-          <span>Colombia · F1 · MotoGP</span>
+          <span>Colombia · F1 · MotoGP · 2026</span>
         </div>
 
         <h1 class="hero-title reveal reveal-delay-1">
-          La <em>pasión</em>
-          <span class="yl">en alta</span>
-          velocidad
+          <em>Pasión</em>
+          <span class="outline">en alta</span>
+          <span class="yl">velocidad</span>
         </h1>
 
         <p class="hero-sub reveal reveal-delay-2">
@@ -83,28 +84,52 @@
             <i class="ti ti-car"></i>Carros escala
           </a>
         </div>
+      </div>
+    </div>
 
-        <div class="hero-stats reveal">
-          <div>
-            <div class="stat-val">+<em>5</em></div>
-            <div class="stat-label">Categorías</div>
-          </div>
-          <div>
-            <div class="stat-val">+<em>38</em></div>
-            <div class="stat-label">Productos</div>
-          </div>
-          <div>
-            <div class="stat-val"><em>6</em></div>
-            <div class="stat-label">Escuderías F1</div>
-          </div>
-          <div>
-            <div class="stat-val"><em>4</em></div>
-            <div class="stat-label">Equipos MotoGP</div>
-          </div>
-        </div>
+    <!-- stats bar pinned to hero bottom -->
+    <div class="hero-stats-bar reveal">
+      <div class="hero-stat-item">
+        <div class="hero-stat-val">+<em>38</em></div>
+        <div class="hero-stat-lbl">Productos en tienda</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-val"><em>10</em></div>
+        <div class="hero-stat-lbl">Escuderías F1 2026</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-val"><em>4</em></div>
+        <div class="hero-stat-lbl">Equipos MotoGP</div>
+      </div>
+      <div class="hero-stat-item">
+        <div class="hero-stat-val">🇨🇴</div>
+        <div class="hero-stat-lbl">Envíos a Colombia</div>
       </div>
     </div>
   </section>
+
+  <!-- MARQUEE #1 — rojo, velocidad -->
+  <div class="marquee-band red" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="m-star">★</span> Mash Racing Store <span class="m-dot"></span></span>
+      <span class="marquee-item">F1 Colombia <span class="m-dot"></span></span>
+      <span class="marquee-item">MotoGP <span class="m-dot"></span></span>
+      <span class="marquee-item">Temporada 2026 <span class="m-dot"></span></span>
+      <span class="marquee-item">Envíos a Todo Colombia <span class="m-dot"></span></span>
+      <span class="marquee-item">Colecciones Exclusivas <span class="m-dot"></span></span>
+      <span class="marquee-item">Ropa Oficial F1 <span class="m-dot"></span></span>
+      <span class="marquee-item">Carros Escala 1:43 <span class="m-dot"></span></span>
+      <!-- duplicado para scroll infinito -->
+      <span class="marquee-item"><span class="m-star">★</span> Mash Racing Store <span class="m-dot"></span></span>
+      <span class="marquee-item">F1 Colombia <span class="m-dot"></span></span>
+      <span class="marquee-item">MotoGP <span class="m-dot"></span></span>
+      <span class="marquee-item">Temporada 2026 <span class="m-dot"></span></span>
+      <span class="marquee-item">Envíos a Todo Colombia <span class="m-dot"></span></span>
+      <span class="marquee-item">Colecciones Exclusivas <span class="m-dot"></span></span>
+      <span class="marquee-item">Ropa Oficial F1 <span class="m-dot"></span></span>
+      <span class="marquee-item">Carros Escala 1:43 <span class="m-dot"></span></span>
+    </div>
+  </div>
 
   <!-- TEAMS -->
   <section class="teams">
@@ -178,6 +203,60 @@
       </div>
     </div>
   </section>
+
+  <!-- STATEMENT SECTION -->
+  <section class="statement-section">
+    <div class="container">
+      <div class="statement-inner">
+        <div class="statement-tag reveal">La tienda de los fans</div>
+        <h2 class="statement-title reveal reveal-delay-1">
+          <span class="red">Viste</span>
+          <span class="ghost">con</span>
+          <span class="yl">orgullo</span>
+        </h2>
+        <div class="statement-cta-row reveal reveal-delay-2">
+          <a href="tienda.html" class="btn btn-primary">
+            <i class="ti ti-flame"></i>Ver toda la tienda
+          </a>
+          <div class="statement-stat-inline">
+            <span class="num">+38</span>
+            <span class="lbl">productos disponibles</span>
+          </div>
+          <div class="statement-stat-inline">
+            <span class="num">10</span>
+            <span class="lbl">escuderías F1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE #2 — dark, equipos -->
+  <div class="marquee-band black" aria-hidden="true">
+    <div class="marquee-track slow">
+      <span class="marquee-item">Red Bull Racing <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Ferrari</span> <span class="m-dot"></span></span>
+      <span class="marquee-item">McLaren <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Mercedes AMG</span> <span class="m-dot"></span></span>
+      <span class="marquee-item">Aston Martin <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Alpine F1</span> <span class="m-dot"></span></span>
+      <span class="marquee-item">Williams <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Haas F1 Team</span> <span class="m-dot"></span></span>
+      <span class="marquee-item">Racing Bulls <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Cadillac F1</span> <span class="m-dot"></span></span>
+      <!-- duplicado -->
+      <span class="marquee-item">Red Bull Racing <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Ferrari</span> <span class="m-dot"></span></span>
+      <span class="marquee-item">McLaren <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Mercedes AMG</span> <span class="m-dot"></span></span>
+      <span class="marquee-item">Aston Martin <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Alpine F1</span> <span class="m-dot"></span></span>
+      <span class="marquee-item">Williams <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Haas F1 Team</span> <span class="m-dot"></span></span>
+      <span class="marquee-item">Racing Bulls <span class="m-dot"></span></span>
+      <span class="marquee-item"><span class="m-hl">Cadillac F1</span> <span class="m-dot"></span></span>
+    </div>
+  </div>
 
   <!-- FEATURED PRODUCTS -->
   <section class="products section">

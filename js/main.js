@@ -17,13 +17,15 @@ function logoHTML() {
 function buildAnnounceBar() {
   const el = document.querySelector(".announce-bar");
   if (!el) return;
-  const items = [
-    { icon: "ti-truck",        text: "Envíos a toda Colombia" },
-    { icon: "ti-brand-whatsapp", text: "Pedidos por WhatsApp" },
-    { icon: "ti-certificate", text: "Productos de alta calidad" },
-    { icon: "ti-star",        text: "Colecciones F1 y MotoGP" },
-    { icon: "ti-shield-check",text: "Garantía de satisfacción" },
+  const defaultItems = [
+    { icon: "ti-truck",         text: "Envíos a toda Colombia" },
+    { icon: "ti-brand-whatsapp",text: "Pedidos por WhatsApp" },
+    { icon: "ti-certificate",   text: "Productos de alta calidad" },
+    { icon: "ti-star",          text: "Colecciones F1 y MotoGP" },
+    { icon: "ti-shield-check",  text: "Garantía de satisfacción" },
   ];
+  const saved = localStorage.getItem("mr_ann");
+  const items = saved ? JSON.parse(saved) : defaultItems;
   const itemsHTML = items.map(i =>
     `<span class="announce-item"><i class="ti ${i.icon}"></i>${i.text}</span><span class="announce-dot"></span>`
   ).join("");
@@ -194,7 +196,7 @@ function initHeroCarousel() {
   const container = document.getElementById("hero-slides");
   if (!container) return;
 
-  const SLIDES = [
+  const defaultSlides = [
     { img: "img/cars/ferrari.png",     label: "Ferrari · F1 2026" },
     { img: "img/cars/redbull.png",     label: "Red Bull Racing · F1 2026" },
     { img: "img/cars/mercedes.png",    label: "Mercedes · F1 2026" },
@@ -207,6 +209,8 @@ function initHeroCarousel() {
     { img: "img/cars/haas.png",        label: "Haas · F1 2026" },
     { img: "img/cars/cadillac.png",    label: "Cadillac · F1 2026" },
   ];
+  const savedSlides = localStorage.getItem("mr_slides");
+  const SLIDES = savedSlides ? JSON.parse(savedSlides) : defaultSlides;
 
   /* pre-build all slide divs */
   SLIDES.forEach((s, i) => {
